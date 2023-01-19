@@ -10,3 +10,4 @@ Việt hoá: Mạnh Đạt
 [**You Compose Software Every Day**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/You-Compose-software-Every-Day.md)
 
 [**Conclusion (Kết luận)**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/Conclusion.md)
+[**The Dao of Immutability (The Way ofthe Functional Programmer)**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/Conclusion.md)
