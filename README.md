@@ -5,5 +5,5 @@ Việt hoá: Mạnh Đạt
 
 ## Contens (Nội dung sách)
 
-- [**You Compose Software Every Day**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/Introduce.md)
-- **Conclusion** (Kết luận)
+- [**You Compose Software Every Day**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/You-Compose-sofeware-Every-Day.md)
+- [**Conclusion (Kết luận)**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/Conclusion.md)
