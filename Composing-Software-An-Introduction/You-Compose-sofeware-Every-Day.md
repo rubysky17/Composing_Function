@@ -197,3 +197,44 @@ Lớp kế thừa là một loại cấu trúc Composite Object. Tất cả các
 - **The inflexible hierarchy problem (Vấn đề phân cấp không linh hoạt)** Nguyên tắc phân loại ancestor duy nhất, nếu có đủ thời gian và tiến hoá, tất cả các class cuối cùng phân loại đều sai đối với trường hợp use-cases mới.
 - **The duplication by necessity problem (Sự trùng lặp các vấn đề không cần thiết)** Do hệ thống phân cấp không linh hoạt, các trường hợp sử dụng mới được thường được thực hiện bằng cách duplicate, thay vì mở rộng, dẫn đến các lớp tương tự khác nhau một cách bất ngờ. Sau khi duplicate bắt đầu, không rõ lớp nào lớp mới nên đi từ đâu, hoặc tại sao.
 - **The gorilla/banana problem** vấn đề với các ngôn ngữ hướng đối tượng là chúng có tất cả môi trường tiềm ẩn này mà nó mang theo. "Bạn muốn một quả chuối nhưng những gì bạn có một con khỉ đột ôm chuối và toàn bộ khu rừng." ∼Joe Armstrong.
+
+Hình thức phổ biến nhất của Objec Composition trong JavaScript được gọi là nối đối tượng **concatenation** (hay còn được gọi là kết thừa nối tiếp (concatenative inheritance): Một cách không chính thức, "Thành phần mixins"). Nó giống như cây kem. bạn bắt đầu với Object (ví dụ: Kem vani), và sau đó trộn với những tín năng mà bạn muốn. Thêm 1 số loại hạt, caramels, chocolate, và kết thúc với món kem trộn cholalate hấp dẫn.
+
+Xây dựng Composites với lớp kế thừa (Class Inheritance):
+
+```js
+class Foo {
+  constructor() {
+    this.a = "a";
+  }
+}
+
+class Bar extends Foo {
+  constructor(options) {
+    super(options);
+    this.b = "b";
+  }
+}
+
+const myBar = new Bar(); // {a: 'a', b: 'b'}
+```
+
+Xây dựng composites với mixin composition:
+
+```js
+  const a = {
+    a: 'a';
+  };
+
+  const b = {
+    b: 'b';
+  }
+
+  const c = {...a, ...b} // {a: 'a', b: 'b'}
+```
+
+Chúng ta sẽ khám phá kiểu khác nhau của Object Composition sâu hơn sau. Và vây giờ, bạn đã hiểu nên làm:
+
+1. Nhiều hơn 1 cách để làm điều đó
+2. Một số cách tốt hơn những cách khác.
+3. Bạn muốn chọn giải pháp đơn giản nhất và linh hoạt nhất cho task hiện tại.
