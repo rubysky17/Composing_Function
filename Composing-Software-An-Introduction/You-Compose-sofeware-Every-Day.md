@@ -135,4 +135,54 @@ const pipe =
 
 _pipe()_ tạo một pipelines cho Hàm 1, passing kết quả qua Hàm 2 với tham số là kết quả trước đó của Hàm 1. Khi bạn sử dụng _pipe()_ (và nó có thể là twin, _compose()_) Bạn không cần định nghĩa biến. Viết hàm mà không cần đề cập hay quan tâm tới tham số được gọi là _"point-free style"_. Để làm được điều đó, bạn sẽ gọi 1 hàm return về 1 hàm mới, còn hơn là khai báo hàm đó tường minh ra. Điều đó có nghĩa bạn không cần sử dụng từ khoá _function_ hoặc Arrow Syntax (=>).
 
-_point-free style_
+_point-free style_ có thể đi sâu hơn nữa nhưng 1 ít ở đây cũng đủ tuyệt vời rồi bởi vì những điều đó phải thêm 1 số biến phức tạp không cần thiết cho function của bạn.
+
+Có một vài lợi ích để giảm độ phức tạp:
+
+### Working Memory (Bộ nhớ làm việc)
+
+Con người trung bình chỉ có một vài tài nguyên được chia sẻ cho lượng tử riêng biệt trong bộ nhớ làm việc⁴ và mỗi biến có khả năng tiêu thụ một trong những lượng tử đó. Khi bạn thêm nhiều biến hơn, khả năng của chúng tôi nhớ lại chính xác ý nghĩa của từng biến bị giảm đi. Các mô hình bộ nhớ làm việc điển hình liên quan đến 4-7 lượng tử rời rạc. Trên những con số đó, tỷ lệ lỗi tăng lên đáng kể.
+Sử dụng _pipe()_, chúng tôi đã loại bỏ 3 biến – giải phóng gần một nửa công việc hiện có của bộ nhớ cho những thứ khác. Điều đó làm giảm tải memory một cách đáng kể. Các nhà phát triển phần mềm có xu hướng giỏi hơn trong việc sắp xếp dữ liệu vào bộ nhớ làm việc so với người bình thường, nhưng không nhiều bằng để làm suy yếu tầm quan trọng của bảo tồn.
+
+### Signal to Noise Ratio
+
+Mã ngắn gọn giúp cải thiện Signal to Noise Ratio của bạn. Nó giống như nghe radio – khi radio không được điều chỉnh đúng với đài, bạn sẽ bị nhiễu nhiều và khó nghe hơn. Khi bạn chỉnh đúng đài, tiếng ồn sẽ biến mất và tìn hiệu rõ hơn nghe hay hơn.
+
+Code cũng tương tự như vậy. Càng ngắn gọn code thì code càng nâng cao khả năng hiểu. Một số code cung cấp thông tin hữu ích nhưng chỉ chiếm 1 ít dung lượng. Nếu bạn giảm số lượng code sử dụng đi mà vẫn không giảm thông tin muốn truyền tải thì bạn sẽ làm cho đoạn code dễ phân tích cú pháp hơn và dễ hiểu hơn cho người khác cần đọc nó.
+
+### Surface Area for Bugs
+
+Hãy xem các chức năng trước và sau. Có vẻ như chức năng này đã gọn hơn và một đi 1 tấn tải trọng. Điều đó rất quan trọng bởi vì bổ sung đoạn code dễ gây khu vực bề mặt bug ẩn sâu bên trong, điều này có nghĩa bugs sẽ tiềm ẩn trong đó.
+
+> Less code = less surface area for bugs = fewer bugs
+
+## Composing Objects
+
+> "Favor object composition over class inheritance" the Gang of Four, “Design Patterns: Elements of Reusable Object Oriented Software”⁵
+
+> "Trong khoa học máy tính, kiểu dữ liệu tổng hợp hoặc kiểu dữ liệu phức tạp có thể được xây dựng từ Kiểu dữ liệu nguyên thuỷ của Lập trình ngôn ngữ và các hỗn hợp khác. Hành động này là xây dựng một loại Composite type (hỗn hợp) được biết đến như 1 Composition. ~ Wikipedia"
+
+Đây là kiểu dữ liệu nguyên thuỷ:
+
+```js
+const firstName = "Claude";
+const lastName = "Debussy";
+```
+
+và đây là hỗn hợp lại:
+
+```js
+const fullName = {
+  firstName,
+  lastName,
+};
+```
+
+Tương tự như thể, tất cả Arrays, Sets, Maps, WeakMaps, TypedArrays, v.v tất cả đều là composite datatypes. Mỗi lần bạn xây dựng bất kì non-primitive cấu trúc dữ liệu, _Bạn đang biểu diễn một số loại điển hình cho Object Composition_.
+
+Chú ý rằng _the Gane if Four_ định nghĩa 1 pattern được gọi là **composite pattern** đó là loại cụ thể của đệ quy Object cho phép bạn xử lý riêng lẻ Components và tổng hợp những composites giống nhau. Một số nhà phá triển bối rối, nghĩ rằng **composite pattern** là một **biểu mẫu của Object Composition**. Đừng bối rối. Rất nhiều loại khác nhau của **Object Composition**.
+
+_the Gang of Four_ tiếp tục thêm, "Bạn sẽ thấy Object Composirion áp dụng lần nữa và lần nữa trong design pattern". và sau đó họ liệu kê ra 3 loại relationship (quan hệ) với **Object Composition**, bao gồm **delegation** (Khi một Object cho phép truy cập thuộc tính của 1 object khác, như được sử dụng trong state, strategy, visitor pattern), **acquaintance** (Khi một Object biết một Object khác bằng cách tham chiếu tới, thường được passing dưới dạng tham số như: relationship, ví dụ như trình xử lý yêu cầu network của Amazon: [link](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=as_li_ss_tl?ie=UTF8&qid=
+1494993475&sr=8-1&keywords=design+patterns&linkCode=ll1&tag=eejs-20&linkId=6c553f16325f3939e5abadd4ee04e8b4) Composing Software: Giới thiệu 8 tham chiếu tới logger để yêu cầu log request --- gọi là trình xử lý logger). Và cuối cùng là **aggregation** (Khi một Object con tạo thành 1 phần của Object cha một có một Relationship ví dụ như: DOM children là những component elements trong DOM node -- A DOM node có children).
+
+Class Inheritance (Kế thừa) có thể được sử dụng để khởi tạo composite objects, nhưng điều đó là 1 cách hạn chế và dễ vỡ để làm. Khi _the Gang of Four_ nói rằng "Ưu tiên Object composition hơn là Class Inheritance", họ đang tư ván bạn tiếp cận linh hoạt hơn Object building, thay vì tiếp cận cứng nhắc, liên kết chặc chẽ class inheritance.
