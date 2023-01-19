@@ -121,7 +121,7 @@ doStuffBetter(20); // =>
 */
 ```
 
-Nếu bạn một thử viế code này mà không cần _Import_ thứ gì hết, thì bạn có thể khai báo lại hàm _pipe_ như sau:
+Nếu bạn một thử viết code này mà không cần _Import_ thứ gì hết, thì bạn có thể khai báo lại hàm _pipe_ như sau:
 
 ```js
 // pipe(...fns: [...Function]) => x => y
@@ -182,7 +182,18 @@ Tương tự như thể, tất cả Arrays, Sets, Maps, WeakMaps, TypedArrays, v
 
 Chú ý rằng _the Gane if Four_ định nghĩa 1 pattern được gọi là **composite pattern** đó là loại cụ thể của đệ quy Object cho phép bạn xử lý riêng lẻ Components và tổng hợp những composites giống nhau. Một số nhà phá triển bối rối, nghĩ rằng **composite pattern** là một **biểu mẫu của Object Composition**. Đừng bối rối. Rất nhiều loại khác nhau của **Object Composition**.
 
-_the Gang of Four_ tiếp tục thêm, "Bạn sẽ thấy Object Composirion áp dụng lần nữa và lần nữa trong design pattern". và sau đó họ liệu kê ra 3 loại relationship (quan hệ) với **Object Composition**, bao gồm **delegation** (Khi một Object cho phép truy cập thuộc tính của 1 object khác, như được sử dụng trong state, strategy, visitor pattern), **acquaintance** (Khi một Object biết một Object khác bằng cách tham chiếu tới, thường được passing dưới dạng tham số như: relationship, ví dụ như trình xử lý yêu cầu network của Amazon: [link](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=as_li_ss_tl?ie=UTF8&qid=
-1494993475&sr=8-1&keywords=design+patterns&linkCode=ll1&tag=eejs-20&linkId=6c553f16325f3939e5abadd4ee04e8b4) Composing Software: Giới thiệu 8 tham chiếu tới logger để yêu cầu log request --- gọi là trình xử lý logger). Và cuối cùng là **aggregation** (Khi một Object con tạo thành 1 phần của Object cha một có một Relationship ví dụ như: DOM children là những component elements trong DOM node -- A DOM node có children).
+_the Gang of Four_ tiếp tục thêm, "Bạn sẽ thấy Object Composirion áp dụng lần nữa và lần nữa trong design pattern". và sau đó họ liệu kê ra 3 loại relationship (quan hệ) với **Object Composition**, bao gồm **delegation** (Khi một Object cho phép truy cập thuộc tính của 1 object khác, như được sử dụng trong state, strategy, visitor pattern), **acquaintance** (Khi một Object biết một Object khác bằng cách tham chiếu tới, thường được passing dưới dạng tham số như: relationship, ví dụ như trình xử lý yêu cầu network của Amazon: [link](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=as_li_ss_tl?ie=UTF8&qid=1494993475&sr=8-1&keywords=design+patterns&linkCode=ll1&tag=eejs-20&linkId=6c553f16325f3939e5abadd4ee04e8b4) Composing Software: Giới thiệu 8 tham chiếu tới logger để yêu cầu log request --- gọi là trình xử lý logger). Và cuối cùng là **aggregation** (Khi một Object con tạo thành 1 phần của Object cha có một Relationship ví dụ như: DOM children là những component elements trong DOM node -- A DOM node có children).
 
-Class Inheritance (Kế thừa) có thể được sử dụng để khởi tạo composite objects, nhưng điều đó là 1 cách hạn chế và dễ vỡ để làm. Khi _the Gang of Four_ nói rằng "Ưu tiên Object composition hơn là Class Inheritance", họ đang tư ván bạn tiếp cận linh hoạt hơn Object building, thay vì tiếp cận cứng nhắc, liên kết chặc chẽ class inheritance.
+Class Inheritance (Kế thừa) có thể được sử dụng để khởi tạo composite objects, nhưng điều đó là 1 cách hạn chế và dễ vỡ để làm. Khi _the Gang of Four_ nói rằng "Ưu tiên Object composition hơn là Class Inheritance", họ đang tư vấn bạn tiếp cận linh hoạt hơn Object building, thay vì tiếp cận cứng nhắc, liên kết chặc chẽ class inheritance. Họ đang khuyến khích bạn ủng hộ mối quan hệ has-a và used-a hơn là quan hệ is-a.
+
+Thay vì đề cập đến các Design Pattern cụ thể, chúng tôi sẽ sử dụng định nghĩa tổng quát hơn về Composition Object từ “Categorical Methods in Computer Science: With Aspects from Topology”⁶ (1989):
+
+> Các Composite objects được hình thành bằng cách đặt các object lại với nhau sao cho mỗi object sau 'một phần' của cái trước.
+
+Lớp kế thừa là một loại cấu trúc Composite Object. Tất cả các Class tạo ra Composite Object, nhưng không phải tất cả Composite Object được tạo bởi các lớp hoặc lớp kế thừa. "Ưu tiên object composition hơn class inheritance" có nghĩa là bạn nên tạo composite objects từ từng phần nhỏ của Components, thay vì kế thừa tất cả thuộc tính từ ancestor (cha) trong class hierarchy. Sau này có thể gây ra nhiều vấn đề nổi tiếng trong thiết kế hướng đối tượng:
+
+- **The tight coupling problem (Vấn đề liên kết chặc chẽ)** Bởi vì những lớp con đều phụ thuộc và sự biểu diễn của lớp cha, lớp kế thừa là khớp nối chặt chẽ nhất có sẵn trong hướng đối tượng.
+- **The fragile base class problem (Vấn đề lớp cơ sở bị mỏng manh)** Do liên kết chặc chẽ, những thay đổi mới đối với lớp cơ sở có thể phá vỡ một số lượng lớn những lớp sau - có khả năng trong code của bên thứ 3 quản lý. Các tác giả có thể phá vỡ code mà họ không hề hay biết.
+- **The inflexible hierarchy problem (Vấn đề phân cấp không linh hoạt)** Nguyên tắc phân loại ancestor duy nhất, nếu có đủ thời gian và tiến hoá, tất cả các class cuối cùng phân loại đều sai đối với trường hợp use-cases mới.
+- **The duplication by necessity problem (Sự trùng lặp các vấn đề không cần thiết)** Do hệ thống phân cấp không linh hoạt, các trường hợp sử dụng mới được thường được thực hiện bằng cách duplicate, thay vì mở rộng, dẫn đến các lớp tương tự khác nhau một cách bất ngờ. Sau khi duplicate bắt đầu, không rõ lớp nào lớp mới nên đi từ đâu, hoặc tại sao.
+- **The gorilla/banana problem** vấn đề với các ngôn ngữ hướng đối tượng là chúng có tất cả môi trường tiềm ẩn này mà nó mang theo. "Bạn muốn một quả chuối nhưng những gì bạn có một con khỉ đột ôm chuối và toàn bộ khu rừng." ∼Joe Armstrong.
