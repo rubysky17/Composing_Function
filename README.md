@@ -11,6 +11,6 @@ Việt hoá: Mạnh Đạt
 
 [**Conclusion (Kết luận)**](https://github.com/rubysky17/Composing_Function/blob/main/Composing-Software-An-Introduction/Conclusion.md)
 
-### The Dao of Immutability (The Way ofthe Functional Programmer)
+### The Dao of Immutability (The Way of the Functional Programmer)
 
 [**The Dao of Immutability (The Way ofthe Functional Programmer)**](https://github.com/rubysky17/Composing_Function/blob/main/The-Dao-of-Immutability/index.md)
