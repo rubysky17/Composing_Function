@@ -73,8 +73,66 @@ const doStuff = (x) => {
   return afterF;
 };
 
-doStuff(20); // /*
+doStuff(20); // =>
+/*
   "afterG: 21"
   "afterF: 42"
 */
 ```
+
+Đầu tiên, hãy kế thừa (abstract) cái "after f", "after g" logging vào 1 cái utility có tên là _trace()_;
+
+```js
+const trace = (label) => (value) => {
+  console.log(`${label}: ${value}`);
+  return value;
+};
+```
+
+và bây giờ chúng ta sử dụng nó nè:
+
+```js
+const doStuff = (x) => {
+  const afterG = g(x);
+  trace("after g")(afterG);
+  const afterF = f(afterG);
+  trace("after f")(afterF);
+  return afterF;
+};
+
+doStuff(20); // =>
+/*
+  "afterG: 21"
+  "afterF: 42"
+*/
+```
+
+Những Thư viện phổ biến như Lodash hoặc Ramda bao gồm những utilities để tạo composing một cách dễ dàng hơn. Bạn có thể viết lại (rewrite) chức năng trên như sau:
+
+```js
+import pipe from "lodash/fp/flow";
+
+const doStuffBetter = pipe(g, trace("after g"), trace("after f"));
+
+doStuffBetter(20); // =>
+/*
+  "afterG: 21"
+  "afterF: 42"
+*/
+```
+
+Nếu bạn một thử viế code này mà không cần _Import_ thứ gì hết, thì bạn có thể khai báo lại hàm _pipe_ như sau:
+
+```js
+// pipe(...fns: [...Function]) => x => y
+const pipe =
+  (...fns) =>
+  (x) =>
+    fns.reduce((y, f) => f(y), x);
+```
+
+Đừng lo lắng nếu bạn chưa biết được cách hoạt động của nó ngay bây giờ. Sau đây chúng ta sẽ khám phá Function Composing trong nhiều chi tiết hơn. Sự thật là, nó rất essential (thiết yếu, cần thiết), bạn sẽ thấy nó được chứng minh và xác minh (demonstrated) nhiều lần khắp bài viết. Điểm đáng chú ý này sẽ giúp bạn trở nên quen thuộc với cách khai báo và cách sử dụng nó một cách tự động. Hãy hoà làm 1 với Composition.
+
+_pipe()_ tạo một pipelines cho Hàm 1, passing kết quả qua Hàm 2 với tham số là kết quả trước đó của Hàm 1. Khi bạn sử dụng _pipe()_ (và nó có thể là twin, _compose()_) Bạn không cần định nghĩa biến. Viết hàm mà không cần đề cập hay quan tâm tới tham số được gọi là _"point-free style"_. Để làm được điều đó, bạn sẽ gọi 1 hàm return về 1 hàm mới, còn hơn là khai báo hàm đó tường minh ra. Điều đó có nghĩa bạn không cần sử dụng từ khoá _function_ hoặc Arrow Syntax (=>).
+
+_point-free style_
