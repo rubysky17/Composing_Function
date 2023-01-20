@@ -45,4 +45,4 @@ transform(3); // 8
 
 Hàm _compose()_ lấy hàm _double_ làm tham số đầu tiên, và hàm _inc_ làm tham số thứ 2, và sau đó return lại 1 Hàm kết hợp cả 2. Bên trong hàm _compose()_ khi _transform()_ được gọi, _f_ là _double()_, _g_ là _inc()_ và _x_ là _3_
 
-![alt](http://~)
+![image](https://user-images.githubusercontent.com/69248909/213656630-0e64ab87-5a78-46cf-bc24-e193c3139b25.png)
