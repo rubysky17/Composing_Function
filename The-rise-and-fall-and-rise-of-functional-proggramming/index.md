@@ -46,3 +46,33 @@ transform(3); // 8
 Hàm _compose()_ lấy hàm _double_ làm tham số đầu tiên, và hàm _inc_ làm tham số thứ 2, và sau đó return lại 1 Hàm kết hợp cả 2. Bên trong hàm _compose()_ khi _transform()_ được gọi, _f_ là _double()_, _g_ là _inc()_ và _x_ là _3_
 
 ![image](https://user-images.githubusercontent.com/69248909/213656630-0e64ab87-5a78-46cf-bc24-e193c3139b25.png)
+
+Phép tính Lambda có ảnh hưởng lớn đến thiết kế phần mềm và trước khoảng năm 1980, rất nhiều biểu tượng có ảnh hưởng của khoa học máy tính đang xây dựng phần mềm bằng cách sử dụng function composition. Lisp là được tạo ra vào năm 1958 và chịu ảnh hưởng nặng nề của phép tính lambda. Ngày nay, Lisp là ứng dụng lâu đời thứ hai ngôn ngữ vẫn còn được sử dụng phổ biến.
+
+Tôi đã được giới thiệu về nó thông qua AutoLISP: ngôn ngữ kịch bản được sử dụng trong Máy tính phổ biến nhất Phần mềm hỗ trợ thiết kế (CAD):AutoCAD. AutoCAD rất phổ biến, hầu như mọi CAD hỗ trợ AutoLISP để chúng có thể tương thích. Lisp cũng là một cách dạy phổ biến ngôn ngữ trong chương trình khoa học máy tính vì ba lý do:
+
+1. Tính đơn giản của nó giúp bạn dễ dàng học Syntax và ngữ nghĩa cơ bản của Lisp trong khoảng một ngày.
+2. Lisp là tất cả về function composition và function composition là một cách tao nhã để cấu trúc các ứng dụng.
+3. Văn bản khoa học máy tính yêu thích của tôi sử dụng Lisp
+
+### The Fall of Functional Programming (Sự tuột dốc của FP)
+
+Ở đâu đó giữa những năm 1970 và 1980, cách mà phần mềm đó được tạo ra đã rời xa sự đơn giản, toán đại số và trở thành một danh sách các hướng dẫn tuyến tính để máy tính tuân theo bằng các ngôn ngữ như K&R C (1978) và bộ biên dịch BASIC nhỏ bé được bán cùng với máy tính gia đình đầu tiên của Những năm 1970 và đầu những năm 1980.
+
+Năm 1972, chương trình Smalltalk của Alan Kay được chính thức hóa và ý tưởng về các vật thể là đơn vị nguyên tử của composition đã được giữ vững. Ý tưởng tuyệt vời của Smalltalk về đóng gói Component và truyền Message đã bị biến dạng vào những năm 80 và 90 bởi C++ và Java thành một ý tưởng khủng khiếp về hệ thống phân cấp thừa kế và mối quan hệ is-a để sử dụng lại tính năng.
+
+Mặc dù Smalltalk là một ngôn ngữ OOP, khi C++ và Java tiếp quản thị trường tư duy, Functional Progarmming đã bị loại bỏ bên lề và học viện: Nỗi ám ảnh hạnh phúc của những người đam mê lập trình nhất, các giáo sư trong tòa tháp của họ và một số sinh viên may mắn đã trốn thoát nỗi ám ảnh bức thực ở Java những năm 1990 - 2010.
+
+Đối với hầu hết chúng ta, tạo ra phần mềm là một cơn ác mộng trong 30 năm. Thời kỳ đen tối.
+
+Lưu ý: Tôi đã học viết mã bằng Basic, Pascal, C++ và Java. Tôi đã sử dụng AutoLisp để thao tác đồ họa 3D. Chỉ AutoLisp là hoạt động. Trong vài năm đầu sự nghiệp lập trình của tôi, tôi đã không nhận ra Functional Programming là một lựa chọn thiết thực bên ngoài lĩnh vực này lập trình đồ họa vector.
+
+### The Rise of Functional Programming (Sự tăng trưởng của FP)
+
+Khoảng năm 2010, một điều tuyệt vời bắt đầu xảy ra: JavaScript bùng nổ. Trước khoảng năm 2006, JavaScript được nhiều người coi là ngôn ngữ đồ chơi được sử dụng để tạo ra các hoạt ảnh dễ thương trong trình duyệt web, nhưng nó có một số tính năng mạnh mẽ ẩn trong đó. Cụ thể, các tính năng quan trọng nhất của phép tính lambda. Mọi người bắt đầu truyền tai nhau về thứ hay ho này được gọi là “Functional Programming”.
+
+Đến năm 2015, ý tưởng về Functional Programming lại phổ biến. Để làm cho nó đơn giản hơn, JavaScript Specification đã có bản nâng cấp lớn đầu tiên của thập kỷ và thêm Arrow Function, khiến nó dễ dàng hơn để tạo và đọc các hàm, biểu thức currying và lambda.
+
+Arrow Function giống như nhiên liệu chất xúc tác cho Functional Programming trong JavaScript. Hôm nay hiếm khi thấy một ứng dụng lớn không sử dụng nhiều kỹ thuật Functional Programming.
+
+Composition là một cách đơn giản, tao nhã và biểu cảm để mô hình hóa rõ ràng hành vi của phần mềm. Quá trình tổng hợp các hàm nhỏ, xác định để tạo các thành phần phần mềm lớn hơn và chức năng tạo ra phần mềm dễ tổ chức, dễ hiểu, gỡ lỗi, mở rộng, kiểm tra và duy trì.
