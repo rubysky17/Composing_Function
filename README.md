@@ -21,3 +21,5 @@
 [**The Rise and Fall and Rise of Functional Programming (Composable Software)**](https://github.com/rubysky17/Composing_Function/blob/main/The-rise-and-fall-and-rise-of-functional-proggramming/index.md)
 
 [**Functional Programming Has Always Been Alive and Well**](https://github.com/rubysky17/Composing_Function/blob/main/Functional-Programming-Has-always-been-alive-and-well/index.md)
+
+[**Why Learn Functional Programming in JavaScript?**](https://github.com/rubysky17/Composing_Function/blob/main/Why-Learn-Functional-Programming-in-JavaScript/index.md)
