@@ -14,3 +14,5 @@ Việt hoá: Mạnh Đạt
 ### The Dao of Immutability (The Way of the Functional Programmer)
 
 [**The Dao of Immutability (The Way ofthe Functional Programmer)**](https://github.com/rubysky17/Composing_Function/blob/main/The-Dao-of-Immutability/index.md)
+
+[**The Rise and Fall and Rise of Functional Programming (Composable Software)**](https://github.com/rubysky17/Composing_Function/blob/main/The-rise-and-fall-and-rise-of-functional-proggramming/index.md)
