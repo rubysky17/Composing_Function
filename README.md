@@ -1,7 +1,8 @@
 # Giới thiệu
 
-Cuốn sách nói sâu hơn về Functional Programming và Composition Object trong JS - Tác giả: Eric Elliot
-Việt hoá: Mạnh Đạt
+- Cuốn sách nói sâu hơn về Functional Programming và Composition Object trong JS - Tác giả: Eric Elliot
+- Việt hoá: Mạnh Đạt
+- Lưu ý: Đọc phần nào có thể link vào link bên dưới sẽ dẫn đến bài viết muốn đọc
 
 ## Nội dung sách
 
@@ -18,3 +19,5 @@ Việt hoá: Mạnh Đạt
 ### The Rise and Fall and Rise of Functional Programming (Composable Software)
 
 [**The Rise and Fall and Rise of Functional Programming (Composable Software)**](https://github.com/rubysky17/Composing_Function/blob/main/The-rise-and-fall-and-rise-of-functional-proggramming/index.md)
+
+[**Functional Programming Has Always Been Alive and Well**](https://github.com/rubysky17/Composing_Function/blob/main/Functional-Programming-Has-always-been-alive-and-well/index.md)
