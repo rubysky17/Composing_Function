@@ -115,3 +115,17 @@ state. Các thành viên trong các nhóm này đều sử dụng cùng một ng
 Trong JavaScript, tất cả những ý tưởng này có thể cùng tồn tại, điều này cho phép nhiều người nắm bắt JavaScript hơn, điều này đã dẫn đến open-source package lớn nhất trên thế giới (tính đến tháng 2 năm 2017), npm
 
 ![image](https://user-images.githubusercontent.com/69248909/213859128-656ea769-2ea3-4277-a30e-b716b38e2d3b.png)
+
+Sức mạnh thực sự của JavaScript là sự đa dạng về suy nghĩ và người dùng trong hệ sinh thái. Nó có thể không hoàn toàn là ngôn ngữ lý tưởng cho những người theo chủ nghĩa FP purist, nhưng nó có thể là ngôn ngữ lý tưởng để làm việc cùng nhau bằng một ngôn ngữ hoạt động trên mọi nền tảng mà bạn có thể tưởng tượng – quen thuộc với những người đến từ các ngôn ngữ phổ biến khác như Java, Lisp , hoặc C. JavaScript sẽ không cảm thấy thoải mái một cách lý tưởng đối với người dùng có bất kỳ nền tảng nào trong số đó, nhưng họ có thể cảm thấy đủ thoải mái để học ngôn ngữ này và nhanh chóng làm việc hiệu quả.
+
+Tôi đồng ý rằng JavaScript không phải là ngôn ngữ tốt nhất cho các lập trình viên Functional. Tuy nhiên, không có ngôn ngữ chức năng nào khác có thể tuyên bố rằng đó là ngôn ngữ mà mọi người có thể sử dụng và chấp nhận, và như ES6 đã chứng minh: JavaScript có thể và sẽ phục vụ tốt hơn nhu cầu của người dùng quan tâm đến FP. Thay vì từ bỏ JavaScript và hệ sinh thái đáng kinh ngạc của nó được hầu hết mọi công ty trên thế giới sử dụng, tại sao không nắm lấy nó và dần dần biến nó thành ngôn ngữ tốt hơn cho thành phần phần mềm?
+
+Hiện tại, JavaScript đã là một ngôn ngữ FP đủ tốt, nghĩa là mọi người đang xây dựng tất cả các loại thứ hữu ích và thú vị trong JavaScript, sử dụng các kỹ thuật FP. Netflix (và mọi ứng dụng được xây dựng bằng Angular 2+) sử dụng các tiện ích chức năng dựa trên RxJS. Facebook²² sử dụng các khái niệm về pure functions, higher-order functions và higher order components trong React để xây dựng Facebook và Instagram. PayPal, KhanAcademy và Flipkart²³ sử dụng Redux để quản lý state.
+
+Họ không đơn độc: Angular, React, Redux và Lodash là những framework và thư viện hàng đầu trong hệ sinh thái ứng dụng JavaScript và tất cả chúng đều chịu ảnh hưởng nặng nề của FP – hoặc trong trường hợp của Lodash và Redux, được xây dựng cho mục đích express kích hoạt các functional programming patterns trong các ứng dụng JavaScript thực sự.
+
+“Tại sao lại là JavaScript?” Bởi vì JavaScript là ngôn ngữ mà hầu hết các công ty thực đang sử dụng để xây dựng phần mềm thực. Dù yêu hay ghét nó, JavaScript đã đánh cắp danh hiệu “most popular functional programming language” từ Lisp, ngôn ngữ mang tiêu chuẩn trong nhiều thập kỷ. Đúng vậy, Haskell là một trình mang tiêu chuẩn phù hợp hơn nhiều cho các khái niệm lập trình chức năng ngày nay, nhưng mọi người không xây dựng nhiều ứng dụng thực trong Haskell.
+
+Tại bất kỳ thời điểm nào, có gần một trăm nghìn cơ hội việc làm JavaScript tại Hoa Kỳ và hàng trăm nghìn cơ hội việc làm khác trên toàn thế giới. Học Haskell sẽ dạy bạn rất nhiều về lập trình chức năng, nhưng học JavaScript sẽ dạy bạn rất nhiều về cách xây dựng các ứng dụng sản xuất cho các công việc thực tế.
+
+Ứng dụng nuốt chửng thế giới, web nuốt chửng ứng dụng và JavaScript nuốt chửng web.
