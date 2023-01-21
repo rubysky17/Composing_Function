@@ -1,10 +1,10 @@
-# The Rise and Fall and Rise of Functional Programming (Composable Software)
+### The Rise and Fall and Rise of Functional Programming (Composable Software)
 
-Khi tôi khoảng độ 6 tuổi, tôi đã dành tất nhiều thời gian để chơ điện tử với người bạn thân của tôi. Nhà thằng bạn tôi có một cái phòng đầy những máy tính. Với tôi, nó rất khó cũng lại. Và điều kì diệu xảy ra, tôi dành rất nhiều giờ để khám phá rất nhiều trò chơi. Một ngày nọ tôi hỏi bạn tôi rằng: "Bằng cách nào chúng ta có thể tạo ra trò chơi được?"
+Khi tôi khoảng độ 6 tuổi, tôi đã dành tất nhiều thời gian để chơi điện tử với người bạn thân của tôi. Nhà thằng bạn tôi có một cái phòng đầy những máy tính. Với tôi, nó rất khó cưỡng lại. Và điều kì diệu xảy ra, tôi dành rất nhiều giờ để khám phá rất nhiều trò chơi. Một ngày nọ tôi hỏi bạn tôi rằng: "Bằng cách nào chúng ta có thể tạo ra trò chơi được?"
 
 Thằng bạn tôi nói không biết, vì vậy nó hỏi ba nó, ba nó với tay lên kệ kéo xuống cuốn sách của các trò chơi được lập trình một cách cơ bản nhất. Vì vậy, tôi đã bắt đầu con đường lập trình. Vào thời điểm trường công có dạy môn đại số, tôi đã rành về chủ đề này rồi, bởi vì lập trình cơ bản là đại số.
 
-### The Rise of Functional Programming (Sự tăng trưởng của FP)
+#### The Rise of Functional Programming (Sự tăng trưởng của FP)
 
 Khi khởi đầu với môn khoa học máy tính, trước khi khoa học máy tính được hiển thị thật sự trên máy vi tính, nó đã tồn tại 2 nhà toán học vĩ đại: Alonzo Churh và Alan Turing. Họ tạo ra 2 sự khác nhau, nhưng đó chỉ là mô hình tính toán tương đương. Cả hai mô hình có thể tính toán bất kỳ chức năng có thể tính toán được bằng máy Turing, nghĩa là, cho đầu vào n, có một máy Turing cuối cùng dừng lại và trả về f(n).
 
@@ -55,7 +55,7 @@ Tôi đã được giới thiệu về nó thông qua AutoLISP: ngôn ngữ kị
 2. Lisp là tất cả về function composition và function composition là một cách tao nhã để cấu trúc các ứng dụng.
 3. Văn bản khoa học máy tính yêu thích của tôi sử dụng Lisp
 
-### The Fall of Functional Programming (Sự tuột dốc của FP)
+#### The Fall of Functional Programming (Sự tuột dốc của FP)
 
 Ở đâu đó giữa những năm 1970 và 1980, cách mà phần mềm đó được tạo ra đã rời xa sự đơn giản, toán đại số và trở thành một danh sách các hướng dẫn tuyến tính để máy tính tuân theo bằng các ngôn ngữ như K&R C (1978) và bộ biên dịch BASIC nhỏ bé được bán cùng với máy tính gia đình đầu tiên của Những năm 1970 và đầu những năm 1980.
 
@@ -67,7 +67,7 @@ Mặc dù Smalltalk là một ngôn ngữ OOP, khi C++ và Java tiếp quản th
 
 Lưu ý: Tôi đã học viết mã bằng Basic, Pascal, C++ và Java. Tôi đã sử dụng AutoLisp để thao tác đồ họa 3D. Chỉ AutoLisp là hoạt động. Trong vài năm đầu sự nghiệp lập trình của tôi, tôi đã không nhận ra Functional Programming là một lựa chọn thiết thực bên ngoài lĩnh vực này lập trình đồ họa vector.
 
-### The Rise of Functional Programming (Sự tăng trưởng của FP)
+#### The Rise of Functional Programming (Sự tăng trưởng của FP)
 
 Khoảng năm 2010, một điều tuyệt vời bắt đầu xảy ra: JavaScript bùng nổ. Trước khoảng năm 2006, JavaScript được nhiều người coi là ngôn ngữ đồ chơi được sử dụng để tạo ra các hoạt ảnh dễ thương trong trình duyệt web, nhưng nó có một số tính năng mạnh mẽ ẩn trong đó. Cụ thể, các tính năng quan trọng nhất của phép tính lambda. Mọi người bắt đầu truyền tai nhau về thứ hay ho này được gọi là “Functional Programming”.
 

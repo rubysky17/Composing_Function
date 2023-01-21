@@ -1,4 +1,4 @@
-## Composing Software: An Introduction
+### Composing Software: An Introduction
 
 Cấu tạo thành phần: “Hành động kết hợp các bộ phận hoặc yếu tố để tạo thành một tổng thể.”
 
@@ -13,7 +13,7 @@ Vấn đề mà bạn không thể tránh Composition là bạn không biết g�
 
 Toàn bộ thế giới đều sử dụng phần mềm. Mỗi chiếc xe mới là một siêu máy tính mini trên vô lăng, và vấn đề với thiết kế phần mềm gây ra những tai nạn và kinh phí cho người khác.
 
-### Bạn Composing Software mỗi ngày
+#### Bạn Composing Software mỗi ngày
 
 Nếu bạn đang là một LTV, Bạn soạn thảo Functions và Cấu trúc dữ liệu mỗi ngày, liệu bạn biết nó hay chưa? Bạn có thể làm nó 1 cách có ý thức (consciously) (và tốt hơn), hoặc bạn có thể làm nó 1 cách vô tình với một cách vô thức.
 Vấn đề của quá trình phát triển phần mềm là chia nhỏ các vấn đề lớn thành nhiều vấn đề nhỏ hơn, xây dựng các components giải quyết các vấn đề nhỏ hơn đó, sau đó kết hợp những thành phần đó lại với nhau để tạo thành 1 ứng dụng hoàn chỉnh.
@@ -139,18 +139,18 @@ _point-free style_ có thể đi sâu hơn nữa nhưng 1 ít ở đây cũng đ
 
 Có một vài lợi ích để giảm độ phức tạp:
 
-### Working Memory (Bộ nhớ làm việc)
+#### Working Memory (Bộ nhớ làm việc)
 
 Con người trung bình chỉ có một vài tài nguyên được chia sẻ cho lượng tử riêng biệt trong bộ nhớ làm việc⁴ và mỗi biến có khả năng tiêu thụ một trong những lượng tử đó. Khi bạn thêm nhiều biến hơn, khả năng của chúng tôi nhớ lại chính xác ý nghĩa của từng biến bị giảm đi. Các mô hình bộ nhớ làm việc điển hình liên quan đến 4-7 lượng tử rời rạc. Trên những con số đó, tỷ lệ lỗi tăng lên đáng kể.
 Sử dụng _pipe()_, chúng tôi đã loại bỏ 3 biến – giải phóng gần một nửa công việc hiện có của bộ nhớ cho những thứ khác. Điều đó làm giảm tải memory một cách đáng kể. Các nhà phát triển phần mềm có xu hướng giỏi hơn trong việc sắp xếp dữ liệu vào bộ nhớ làm việc so với người bình thường, nhưng không nhiều bằng để làm suy yếu tầm quan trọng của bảo tồn.
 
-### Signal to Noise Ratio
+#### Signal to Noise Ratio
 
 Mã ngắn gọn giúp cải thiện Signal to Noise Ratio của bạn. Nó giống như nghe radio – khi radio không được điều chỉnh đúng với đài, bạn sẽ bị nhiễu nhiều và khó nghe hơn. Khi bạn chỉnh đúng đài, tiếng ồn sẽ biến mất và tìn hiệu rõ hơn nghe hay hơn.
 
 Code cũng tương tự như vậy. Càng ngắn gọn code thì code càng nâng cao khả năng hiểu. Một số code cung cấp thông tin hữu ích nhưng chỉ chiếm 1 ít dung lượng. Nếu bạn giảm số lượng code sử dụng đi mà vẫn không giảm thông tin muốn truyền tải thì bạn sẽ làm cho đoạn code dễ phân tích cú pháp hơn và dễ hiểu hơn cho người khác cần đọc nó.
 
-### Surface Area for Bugs
+#### Surface Area for Bugs
 
 Hãy xem các chức năng trước và sau. Có vẻ như chức năng này đã gọn hơn và một đi 1 tấn tải trọng. Điều đó rất quan trọng bởi vì bổ sung đoạn code dễ gây khu vực bề mặt bug ẩn sâu bên trong, điều này có nghĩa bugs sẽ tiềm ẩn trong đó.
 

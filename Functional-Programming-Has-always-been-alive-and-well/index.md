@@ -1,4 +1,4 @@
-# Functional Programming Has Always Been Alive and Well
+### Functional Programming Has Always Been Alive and Well
 
 Bất chấp sự ăn miếng trả miếng này đối với các ngôn ngữ phổ biến, FP luôn được sống và khỏe mạnh. Lisp và Smalltalk là một trong những đối thủ cạnh tranh lớn nhất của C trong bối cảnh công nghiệp của những năm 1980 và 1990. Smalltalk là một giải pháp phần mềm doanh nghiệp phổ biến tại 500 công ty may mắn bao gồm JPMorgan Chase¹⁰ và Lisp đã được sử dụng tại NASA JPL để lập trình cho xe tự hành trên sao Hỏa¹¹.
 

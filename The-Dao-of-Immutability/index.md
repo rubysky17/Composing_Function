@@ -1,8 +1,8 @@
-# The Dao of Immutability (The Way of the Functional Programmer)
+#### The Dao of Immutability (The Way of the Functional Programmer)
 
 Functional Programming là nền tảng của Javascript và tính bất biến cũng là nền tảng trụ cột của FP. Bạn không thể hiểu đầy đủ về FP nếu không hiểu tính bất biến. Chương này có thể có ích cho bạn.
 
-## Forward
+#### Forward
 
 Tôi dạo lại các kho lưu trữ của những thư viện cũ, và tìm thấy được một hầm tối tăm của tính toán trong đó. Ở đó, tôi đã scroll xuống tìm thấy một cuộn giấy bị lãng quên trên sàn nhà. Cuộc giấy đó được bao bọc trong một ống thép bụi bặm và có nhãn là: "Từ kho lưu trữ của nhà thờ Lambda."
 

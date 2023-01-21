@@ -1,4 +1,4 @@
-## Conclusion (Kết luận)
+### Conclusion (Kết luận)
 
 Đây không phải là vấn đề về Functional Progamming (FP) vs Object-orented Programming (OOP) hoặc ngôn ngữ này so với ngôn ngữ khác. Components có thể dưới dạng hàm, cấu trúc dữ liệu, lớp etc... Các ngôn ngữ lập trình có xu hướng cung cấp các Atomic Elements cho các Components. Java cung cấp Objects, Haskell cung cấp Functions, etc... Nhưng bất kể ngôn ngữ nào và mô hình nào bạn thích, bạn không thể nào tránh khỏi việc Composing Functions và cấu trúc dữ liệu. Cuối cùng, đó là tất cả những gì đã đề cập trên.
 
