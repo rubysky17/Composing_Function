@@ -114,5 +114,4 @@ state. Các thành viên trong các nhóm này đều sử dụng cùng một ng
 
 Trong JavaScript, tất cả những ý tưởng này có thể cùng tồn tại, điều này cho phép nhiều người nắm bắt JavaScript hơn, điều này đã dẫn đến open-source package lớn nhất trên thế giới (tính đến tháng 2 năm 2017), npm
 
-![image](https://user-images.githubusercontent.com/69248909/213859122-0943dcfa-ce0a-4818-9267-88bb6f5cd289.png)
-
+![image](https://user-images.githubusercontent.com/69248909/213859128-656ea769-2ea3-4277-a30e-b716b38e2d3b.png)
