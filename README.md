@@ -27,3 +27,5 @@
 ### Why Learn Functional Programming in JavaScript?
 
 [**Why Learn Functional Programming in JavaScript?**](https://github.com/rubysky17/Composing_Function/blob/main/Why-Learn-Functional-Programming-in-JavaScript/index.md)
+
+[**Pure Functions**](https://github.com/rubysky17/Composing_Function/blob/main/Pure-Function/index.md)
